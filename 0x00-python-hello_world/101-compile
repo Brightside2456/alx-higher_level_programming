@@ -4,4 +4,7 @@ import os
 en_var = os.environ.get('PYFILE')
 en_var_in_c = en_var + 'c'
 print(f"Compiling {en_var} ...")
-py_compile.compile(en_var, cfile=en_var_in_c)
+with open(en_var, 'rb') as f:
+	code = compile(f.read(), en_var, 'exec')
+	with open(en_var_in_c, 'wb') as pyc:
+		pyc.write(code.co_code)
