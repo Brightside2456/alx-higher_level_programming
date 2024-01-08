@@ -1,0 +1,5 @@
+#!/usr/bin/python3
+import py_compile
+import os
+en_var = os.getenv('PYFILE')
+py_compile.compile(en_var, cfile= en_var + 'c')
