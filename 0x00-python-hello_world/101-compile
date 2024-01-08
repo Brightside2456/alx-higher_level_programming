@@ -1,5 +1,7 @@
 #!/bin/bash
 import py_compile
 import os
-en_var = os.getenv('PYFILE')
-py_compile.compile(en_var, cfile= en_var + 'c')
+en_var = os.environ.get('PYFILE')
+en_var_in_c = en_var + 'c'
+print(f"Compiling {en_var} ...")
+py_compile.compile(en_var, cfile=en_var_in_c)
