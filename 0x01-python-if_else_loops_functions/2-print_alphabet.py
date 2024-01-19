@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 
-for i in f"abcdefghijklmnopqrstuvwxyz":
-    print(i, end="")
+for i in "abcdefghijklmnopqrstuvwxyz":
+    print(f"{i}", end="")
