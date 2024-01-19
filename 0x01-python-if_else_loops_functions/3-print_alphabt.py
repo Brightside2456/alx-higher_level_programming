@@ -4,4 +4,4 @@ for i in 'abcdefghijklmnopqrstuvwxyz':
     if i == "q" or i == "e":
         pass
     else:
-        print(i, end="")
+        print("{o}".format(o=i), end="")
